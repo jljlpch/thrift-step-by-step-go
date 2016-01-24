@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/LC2010/thrift-step-by-step-go/gen-go/account"
+	"github.com/LC2010/thrift-step-by-step-go/account/gen-go/account"
 	"github.com/apache/thrift/lib/go/thrift"
 	"net"
 	"os"
@@ -44,5 +44,6 @@ func main() {
 	// 第三个请求，name为空的请求
 	request.Name = ""
 	r, err = client.DoAction(request)
+	fmt.Println(r)
 
 }
